@@ -1,0 +1,29 @@
+
+
+  
+  <div class="card">
+     
+  <div class ="card-body">
+      <h4 class="card-title col-md-4">Meeting Report</h4>
+      <p *ngIf="!reports"><em>Loading...</em></p>
+      <table class="table table-striped table-responsive" aria-labelledby="tableLabel" *ngIf="reports">
+        <thead>
+          <tr class="table-info" >
+            <th>Attendee Name</th>
+            <th>No. of Meetings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let report of reports">
+            <td>{{ report.attendeeName }}</td>
+            <td>{{ report.reportCount }}</td>
+           </tr>
+        </tbody>
+      </table>
+  </div>
+
+</div>
+
+
+
+

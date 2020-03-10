@@ -1,0 +1,34 @@
+<div class="card">        
+<div class="card-body">
+    <input type="submit" routerLink='add' value="Create" class="btn btn-info">
+</div>
+  <div class="card-body">
+      <h4 class="card-title">Meeting List</h4>
+      <p *ngIf="!meetings"><em >Loading...</em></p>
+      <table class="table table-striped table-responsive" aria-labelledby="tableLabel" *ngIf="meetings">
+        <thead>
+          <tr class="table-info">
+            <th>Subject</th>
+            <th>Agenda</th>
+            <th>Meeting Attendees</th>
+            <th>Meeting Time</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let meeting of meetings">
+            <td>{{ meeting.meetingSubject }}</td>
+            <td>{{ meeting.meetingAgenda }}</td>
+            <td>{{ meeting.meetingAttendees }}</td>
+            <td>{{ meeting.meetingTime }}</td>
+            <td><a [routerLink]="['edit', meeting.meetingID]" class="btn btn-info">Update</a></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+</div>
+
+
+
+
