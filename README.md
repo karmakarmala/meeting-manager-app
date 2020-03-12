@@ -1,3 +1,7 @@
+# Demo
+
+![alt text](https://github.com/karmakarmala/Meeting-Manager-AngularUI/blob/master/src/assets/Demo.gif "Application Demo")
+
 # MeetingManagerApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
